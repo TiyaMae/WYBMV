@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HI POGI</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico"
+    </head>
+    <body>
+        <div class="outer-cont">
+            <div class="cont">
+                <div class="sulod">
+                    <h2 class="question font-bold">Will You Be My Valentine?</h2>
+                    <img class="gif" alt="gif" src="https://i.pinimg.com/originals/ab/87/00/ab870031ec85973614801c7eb80de945.gif">
+                    <div class="btn-group">
+                        <button class="yes-btn" onclick="nextPage()">Yes</button>
+                        <button class="no-btn" onclick="moveButton()">No</button>
+                        
+                        <script>
+                            function nextPage() {
+                                window.location.href="yes.html";
+                            }
+                            
+                            function moveButton() {
+                                var buttons = document.getElementsByClassName('no-btn');
+                                if (buttons.length > 0) {
+                                    var button = buttons[0];
+                                    var x = Math.random() * (window.innerWidth - button.offsetWidth);
+                                    var y = Math.random() * (window.innerHeight - button.offsetHeight);
+                                    button.style.left = `${x}px`;
+                                    button.style.top = `${y}px`;
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </body>
+</html>
